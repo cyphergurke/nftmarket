@@ -1,6 +1,6 @@
 # Basic NFT Marketplace
 
-# Technologies:
+ Technologies:
 Nextjs, Solidity, Tailwindcss
 
 File Storage: Skynet & IPFS
@@ -9,7 +9,7 @@ The Maketplace has 0% fees, but network fees depending on which Network it is de
 
 License: MIT
 
-# Test on localhost:3000
+ Test on localhost:3000
 Try running some of the following tasks:
 
 ```shell
@@ -17,8 +17,7 @@ npx hardhat node
 npx hardhat run scripts/deploy.js --network localhost
 npx run dev
 ```
-# Build
-
+Build
 ```shell
 npm run build
 ```
