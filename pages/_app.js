@@ -6,36 +6,36 @@ import Image from 'next/image';
 
 const Menu = () => (
   <>
-    <div className='flex  justify-center'>
-      <div>
-        <Link href="/">
-          <a className="p-6 active:text-violet-700">
-            Buy NFT
-          </a>
-        </Link>
-      </div>
-      <div>
-        <Link href="/create-nft">
-          <a className="p-6 active:text-violet-700">
-            Create NFT
-          </a>
-        </Link>
-      </div>
-      <div>
-        <Link href="/my-nfts">
-          <a className="p-6 active:text-violet-700">
-            My NFTs
-          </a>
-        </Link>
-      </div >
-      <div>
-        <Link href="/dashboard">
-          <a className="p-6 active:text-violet-700">
-            All Nfts
-          </a>
-        </Link>
-      </div >
+
+    <div>
+      <Link href="/">
+        <a className="p-6 active:text-violet-700 hover:text-pink-400 ">
+          Buy NFT
+        </a>
+      </Link>
     </div>
+    <div>
+      <Link href="/create-nft">
+        <a className="p-6 active:text-violet-700 hover:text-pink-400 ">
+          Create NFT
+        </a>
+      </Link>
+    </div>
+    <div>
+      <Link href="/my-nfts">
+        <a className="p-6 active:text-violet-700 hover:text-pink-400 ">
+          My NFTs
+        </a>
+      </Link>
+    </div >
+    <div>
+      <Link href="/dashboard">
+        <a className="p-6 active:text-violet-700 hover:text-pink-400 ">
+          All Nfts
+        </a>
+      </Link>
+    </div >
+
   </>
 )
 
@@ -55,14 +55,14 @@ function MyApp({ Component, pageProps }) {
         <div className='  flex'>
 
           <div>
-            <img src="https://bitcoin-uni.de/assets/images/kompl.-b-day-mode-14x-8-192x151.png" className='h-16 w-18 p-1' />
+            <img src="https://bitcoin-uni.de/assets/images/kompl.-b-day-mode-14x-8-192x151.png" className='h-14 w-16 p-1' />
           </div>
 
 
 
 
-          <div className=" text-2xl pt-4 text-white font-semibold    lg:flex   max-w-xl:hidden sm:hidden  hidden  ">
-            <div className=' flex  justify-center  '>
+          <div className=" text-2xl pt-4 text-white    lg:flex   max-w-xl:hidden sm:hidden  hidden  ">
+            <div className='  flex ml-40 '>
               <Menu />
             </div>
           </div>
@@ -74,9 +74,9 @@ function MyApp({ Component, pageProps }) {
           </div>
         </div>
 
-        <div className=' lg:hidden flex justify-center'>
+        <div className=' lg:hidden  flex justify-center'>
           {toggleMenu && (
-            <div className='flex-col text-xl text-white font-semibold justify-center  '>
+            <div className=' flex-col text-xl text-white font-semibold   flex justify-center '>
               <Menu />
             </div>
           )}

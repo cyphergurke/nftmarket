@@ -65,15 +65,19 @@ export default function Home() {
 
 
 
-  if (loadingState === 'loaded' && !nfts.length) return (<h1 className="px-20 py-10 text-3xl">No items in marketplace</h1>)
+  if (loadingState === 'loaded' && !nfts.length) return (
+    <div className="flex justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+      <h1 className="py-10 px-20 text-3xl pt-96 pb-96">No NFTs in Marketplace</h1>
+    </div>
+  )
   return (
-    <div className="flex justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
-      <div className="px-4" style={{ maxWidth: '1600px' }}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 pb-7">
+    <div className="flex justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  ">
+      <div className="p-10 pt-40 pb-40" style={{ maxWidth: '1600px' }}>
+        <div className=" grid  flex-row h-min sm:grid-cols-2 lg:grid-cols-4 gap-4  ">
           {
             nfts.map((nft, i) => (
               <div key={i} className="bg-white shadow rounded-xl overflow-hidden ">
-                <img src={nft.image} />
+                <img src={nft.image} className="h-60" />
                 <div className="p-4">
                   <p id="name" style={{ height: '44px' }} className="text-2xl font-semibold">{nft.name}</p>
                   <div style={{ height: '70px', overflow: 'hidden' }}>

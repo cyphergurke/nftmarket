@@ -198,7 +198,7 @@ export default function CreateItem() {
                console.log('Error uploading file: ', error)
            }
        } */
-    console.log(fileUrl)
+
     async function uploadToIPFS() {
         const { name, description, tags, creator, price } = formInput
         if (!name || !description || !tags || !creator || !price || !fileUrl) return
@@ -210,7 +210,7 @@ export default function CreateItem() {
             const added = await client.add(data)
             const url = `https://ipfs.infura.io/ipfs/${added.path}`
             // after metadata is uploaded to IPFS, return the URL to use it in the transaction  
-            console.log("Ssuccess")
+
             return url
         } catch (error) {
             console.log('Error uploading file: ', error)
@@ -245,13 +245,9 @@ export default function CreateItem() {
         <div className="flex justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
 
             <div className="lg:w-1/2 md:w-1/2 flex flex-col pb-12">
-
-
                 <div className='justify-center flex mt-10'>
-                    <h1 className='text-4xl text-white font-bold'>Create your NFT!</h1>
+                    <h1 className='text-4xl text-white '>Create your NFT!</h1>
                 </div>
-
-
                 <input
                     placeholder="Asset Name"
                     className="mt-8 border rounded p-4"

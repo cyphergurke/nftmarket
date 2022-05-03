@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from 'web3modal'
 import { useRouter } from "next/router";
-import Image from 'next/dist/client/image';
+
 
 import {
     marketplaceAddress
@@ -84,7 +84,7 @@ export default function NftDetails() {
                                         <p style={{ height: '64px' }} className="text-2xl font-semibold">{nft.name}</p>
 
                                     </div>
-                                    <Image src={nft.image} className="rounded" />
+                                    <img src={nft.image} className="rounded" />
 
                                     <div className="p-4 bg-black">
                                         <p className="text-2xl font-bold text-white">Price - {nft.price} Eth</p>

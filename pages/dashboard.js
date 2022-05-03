@@ -31,7 +31,7 @@ export default function CreatorDashboard() {
 
         const items = await Promise.all(data.map(async i => {
             const tokenUri = await contract.tokenURI(i.tokenId)
-            console.log(tokenUri)
+
 
             const meta = await axios.get(tokenUri)
             let price = ethers.utils.formatUnits(i.price.toString(), 'ether')
@@ -58,19 +58,23 @@ export default function CreatorDashboard() {
 
 
 
-    if (loadingState === 'loaded' && !nfts.length) return (<h1 className="py-10 px-20 text-3xl">No NFTs listed</h1>)
+    if (loadingState === 'loaded' && !nfts.length) return (
+
+
+        <div className="flex justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+            <h1 className="py-10 px-20 text-3xl pt-96 pb-96">No NFTs listed</h1>
+        </div>
+    )
     return (
         <div className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'>
-            <div className="p-4  text-center ">
-                <div className='justify-center flex mt-10'>
-                    <h1 className='text-4xl text-white '>NFT for Sale</h1>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 content-center">
+            <div className="p-10 pt-40 pb-40 text-center ">
+
+                <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-4 pt-4 content-center">
                     {
                         nfts.map((nft, i) => (
 
                             <div key={i} className="  shadow rounded-xl overflow-hidden bg-white">
-                                <img src={nft.image} className="rounded" />
+                                <img src={nft.image} className="h-60" />
                                 <div className="p-4">
                                     <p className="text-2xl font-semibold">Name: {nft.name}</p>
                                     <p className="text-2xl font-semibold">Description: {nft.description}</p>
