@@ -47,7 +47,7 @@ export default function ResellNFT() {
     return (
         <div className="flex justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
 
-            <div className="w-1/2 flex flex-col pb-12 mt-10">
+            <div className="w-1/2 flex pt-40 pb-40  flex-col   mt-10">
                 <div className='justify-center flex mt-7'>
                     <h1 className='text-4xl text-pink-500 font-bold mb-5'>Sell your NFT!</h1>
                 </div>
